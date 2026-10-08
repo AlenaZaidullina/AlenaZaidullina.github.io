@@ -1,0 +1,75 @@
+/* бургер кнопки */
+
+.header__burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 110;
+}
+
+.header__burger-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-accent);
+    border-radius: 2px;
+    transition: transform var(--transition-base),
+                opacity var(--transition-base);
+}
+
+/* Первая полоска */
+.header__burger[aria-expanded="true"] .header__burger-line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+/* Вторая полоска*/
+.header__burger[aria-expanded="true"] .header__burger-line:nth-child(2) {
+    transform: translateY(-9px) rotate(-45deg)
+}
+
+
+
+
+@media (min-width: 768px) {
+    .header__burger {
+        display: none;
+    }
+}
+
+
+
+
+/*Жидкое стекло*/
+
+.glass-button {
+  /* Полупрозрачный фон */
+  background: rgba(255, 255, 255, 0.08); 
+  
+  /* Эффект матового стекла (размывает то, что ЗА кнопкой) */
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  
+  /* Скругление углов (для круглых кнопок — 50%) */
+  border-radius: 50%; 
+  
+  /* Тонкая стеклянная обводка с градиентом блика */
+  border: 1px solid rgba(255, 255, 255, 0.4); 
+  
+  /* Мягкая тень для отделения от подложки */
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.3), /* Внутренний блик сверху */
+    0 8px 24px rgba(0, 0, 0, 0.15);            /* Внешняя объемная тень */
+
+  /* Для выравнивания иконки стрелки по центру */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+}

@@ -1,0 +1,48 @@
+/*Шрифты*/
+
+@font-face {
+    font-family: 'Capitals';
+    src: url("../../assets/fonts/serifiqo-4f/OT-ps/Serifiqo\ 4F\ Free\ Capitals.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'Capitals_2';
+    src: url("../../assets/fonts/serifiqo-4f/OT-tt/Serifiqo\ 4F\ Free\ Capitals.ttf") format('opentype');
+}
+
+@font-face {
+    font-family: "Arina";
+    src: url(../../assets/fonts/arina/Arina.ttf) format('opentype');
+}
+
+
+@font-face {
+    font-family: "Foglihten";
+    src: url(../../assets/fonts/FoglihtenNo06\ 2/FoglihtenNo06/FoglihtenNo06_076.otf) format('opentype');
+}
+
+
+@font-face {
+    font-family: "Onest thin"; 
+    src: url(../../assets/fonts/OnestThin1602-hint.ttf) format('opentype');
+}
+
+@font-face {
+    font-family: "Onest light";
+    src: url(../../assets/fonts/OnestLight1602-hint.ttf) format('opentype');
+}
+
+@font-face {
+    font-family: "Onest medium";
+    src: url(../../assets/fonts/OnestMedium1602-hint.ttf) format('opentype');
+}
+
+@font-face {
+    font-family: "Amstelvar";
+    src: url(../../assets/fonts/Amstelvar-Roman[wdth\,wght\,opsz].ttf) format('opentype');
+}
+
+
+
+
+

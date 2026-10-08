@@ -1,0 +1,36 @@
+.section_title {
+  display: flex;
+  align-items: center; /* Выравнивает линию и текст строго по центру одной оси */
+  width: 100%;
+  margin-top: 20px;    /* Отступ сверху */
+  margin-bottom: 10px; /* Отступ снизу до контента */
+}
+
+/* 1. Сама линия (теперь она идет ПЕРЕД текстом) */
+.section_title::before {
+  content: '';
+  flex-grow: 1; /* Растягивает линию на всю доступную ширину слева */
+  height: 1px;  /* Толщина линии */
+  background-color: rgba(0, 0, 0, 0.2); /* Цвет линии */
+  margin-right: 15px; /* Отступ от линии до начала слова Skills */
+}
+
+/* 2. Текст "Skills" справа от линии */
+.section_text {
+  font-size: 1.7rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--color-text-2); 
+  line-height: 1;
+  white-space: nowrap; /* Запрещает слову переноситься на новую строку */
+}
+
+@media (min-width: 768px) {
+    .section_num {
+        font-size: 2rem;
+    }
+
+    .section_text {
+        font-size: 2rem;
+    }
+}

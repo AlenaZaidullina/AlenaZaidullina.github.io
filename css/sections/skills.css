@@ -1,0 +1,61 @@
+.skills_section {
+    margin-top: 10px;
+    width: 100%;
+    padding: 60px 0;   /* пространство сверху и снизу */
+    background-image: url('../../assets/svg/skills_editorial_background.svg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.skills_container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+
+.skill_card {
+  padding-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
+  border-radius: 5px;
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.skill_card_title {
+    font-family: "Amstelvar";
+    color: #000;
+    font-weight: 300;
+}
+
+.list-content {
+    color: #000;
+    font-family: "Amstelvar";
+}
+
+
+@media (min-width: 576px) {
+
+    .skills_container {
+            /* Создаются адаптивные колонки (минимум 320px каждая) */
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        }
+
+}
+
+@media (min-width: 1400px) {
+    .skills_container {
+        grid-template-columns: repeat(6, 1fr); 
+    }
+    
+}
+
+

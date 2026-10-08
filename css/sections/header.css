@@ -1,0 +1,170 @@
+.header_section {
+    width: 100%;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: flex-end; /* Бургер кнопка строго справа */
+    padding: 16px 24px;
+    margin: 0 auto;
+}
+
+/* --- КНОПКА БУРГЕРА --- */
+.header__burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 110;
+}
+
+.header__burger-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-accent);
+    border-radius: 2px;
+    transition: transform var(--transition-base),
+                opacity var(--transition-base);
+}
+
+/* Анимация крестика (управляется твоим JS) */
+.header__burger[aria-expanded="true"] .header__burger-line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.header__burger[aria-expanded="true"] .header__burger-line:nth-child(2) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* --- МОБИЛЬНАЯ НАВИГАЦИЯ (ИЗОЛИРОВАНА ВНУТРИ БУРГЕРА) --- */
+.header__nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100vh;    
+    background-color: rgba(32, 20, 9, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%); /* Полностью прячем навигацию за экран */
+    transition: transform var(--transition-base);
+    z-index: 105; 
+}
+
+/* Меню плавно выезжает, когда твой JS добавляет класс */
+.header__nav.is-open {
+    transform: translateX(0);
+}
+
+.header__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header__menu-spacer {
+    display: none;
+}
+
+.header__nav-link {
+    font-family: "Foglihten";
+    font-size: 1.5rem;
+    color: #E3D7C5;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+
+@media (min-width: 768px) {
+    
+    .header__inner {
+        justify-content: center;
+    }
+
+    
+    .header__burger {
+        display: none;
+    }
+
+   
+    .header__nav {
+        position: static;     
+        width: 100%;          
+        height: auto;         
+        background-color: transparent; 
+        transform: translateX(0);
+        display: flex;
+        z-index: auto;
+    }
+
+   
+    .header__nav-list {
+        flex-direction: row; 
+        gap: 48px;          
+    }
+
+    .header__nav-link {
+        font-size: 1rem; 
+        color: var(--color-text);
+    }
+
+    .header__nav-link:hover {
+        text-decoration: underline;
+        text-underline-offset: 4px; /* Делает небольшой аккуратный отступ от текста до линии */
+        text-decoration-thickness: 1px;
+    }
+
+}
+
+
+@media (min-width: 992px) {
+
+    .header__inner {
+        padding: 10px 0px 10px 0;
+    }
+
+    .header__nav-link {
+        font-size: 1.3rem;
+    }
+
+    .header__nav-list {
+        width: 100%;
+    }
+
+    .header__menu-spacer {
+        display: block;
+        flex-grow: 1;
+    }
+}
+
+
+@media (min-width: 1200px) {
+
+    .header__nav-list {
+        width: 100%;
+    }
+
+    .header__inner {
+        padding: 10px 10px; 
+    }
+
+    .header__nav-link {
+        font-size: 1.5rem;
+    }   
+}
+
+

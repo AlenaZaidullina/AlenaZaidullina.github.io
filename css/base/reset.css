@@ -1,0 +1,50 @@
+/*сброс стилей браузера*/
+
+html, body {
+   /* overflow-x: hidden;  Запрещает горизонтальную прокрутку сайта */
+    position: relative;
+    background-color: var(--color-bg);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+html {
+    scroll-behavior: smooth; /* Включает плавную прокрутку по всему сайту */
+}
+
+body {
+    position: relative;
+    background-color: var(--color-bg);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    position: relative;
+    z-index: 2; /* Поднимает контент над контактами */
+    background-color: var(--color-bg);
+    
+    /* тень снизу, чтобы контент плавно "отрывался" от контактов */
+    box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.3); 
+    overflow-x: hidden; 
+}
+
+h1 {
+    font-family: "Foglihten";
+    font-weight: 100;
+    letter-spacing: 5px;
+}
+
+h2 {
+    font-family: "Capitals_2";
+}
+
+h3 {
+    font-family: "Amstelvar";
+}

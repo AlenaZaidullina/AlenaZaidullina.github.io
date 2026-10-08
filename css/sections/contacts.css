@@ -1,0 +1,25 @@
+.contacts_section {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 50vh; /* Минимальная высота секции, настройте под себя (например, 400px) */
+    z-index: 1; /* Опускает секцию под тег main */
+    
+    /* Стили для центрирования контента внутри контактов */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-warm-gray); 
+}
+
+.title_contacts {
+    margin-top: 20px;
+}
+
+.text_contacts {
+    font-family: "Foglihten";
+    font-size: 1.5rem;
+    font-weight: 100;
+}
