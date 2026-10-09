@@ -1,17 +1,12 @@
 .skills_section {
     margin-top: 10px;
     width: 100%;
-    padding: 60px 0;   /* пространство сверху и снизу */
-    background-image: url('../../assets/svg/skills_editorial_background.svg');
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    padding-top: 60px;   /* пространство сверху и снизу */
 }
 
 .skills_container {
     width: 100%;
-    margin: 0 auto;
+    margin: 40px auto;
     padding: 10px;
 
     display: grid;
@@ -21,41 +16,59 @@
 
 
 .skill_card {
-  padding-bottom: 20px;
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(2px);
-  border-radius: 5px;
-
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    padding-bottom: 20px;
+    position: relative; 
 }
 
+.skill_card_num {
+    position: absolute;
+    top: -15px;       /* Приподнимаем чуть выше заголовка для динамики */
+    left: -5px;       /* Сдвигаем влево, чтобы текст ложился поверх */
+    z-index: 1;       /* Переводим на нижний слой внутри карточки */
+    
+    font-family: "Miama", sans-serif;
+    font-size: 5.5rem; /* Сильно увеличили размер, так как шрифт Miama обычно очень изящный и тонкий */
+    font-weight: 300;
+    color: #2B231E;
+    opacity: 0.12;     /* Чуть-чуть уменьшили непрозрачность, чтобы крупная цифра не спорила с текстом */
+    line-height: 1;
+    pointer-events: none;
+}
 
+/* ЧТОБЫ ТЕКСТ БЫЛ ПОВЕРХ ЦИФРЫ */
 .skill_card_title {
-    font-family: "Amstelvar";
+    font-family: "Miama";
     color: #000;
     font-weight: 300;
+    
+    position: relative; /* Включаем позиционирование для работы z-index */
+    z-index: 2;        /* Поднимаем заголовок выше цифры (2 больше чем 1) */
 }
 
 .list-content {
     color: #000;
     font-family: "Amstelvar";
+    
+    position: relative; /* Списки тоже приподнимем, если цифра будет заходить на них */
+    z-index: 2;
+}
+
+@media (min-width: 576px) {
+    .skills_container {
+        /* Создаются адаптивные колонки (минимум 320px каждая) */
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
 }
 
 
-@media (min-width: 576px) {
-
+@media (min-width: 1200px) {
     .skills_container {
-            /* Создаются адаптивные колонки (минимум 320px каждая) */
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        }
-
+        margin: 60px 0 40px 0;
+    }
 }
 
 @media (min-width: 1400px) {
     .skills_container {
         grid-template-columns: repeat(6, 1fr); 
     }
-    
 }
-
-
