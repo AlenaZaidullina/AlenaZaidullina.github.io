@@ -1,0 +1,68 @@
+.about_section {
+    margin-top: 10px;
+    width: 100%;
+    padding-top: 60px;
+}
+
+.container_about_me {
+    position: relative;
+    margin: 45px 15px 25px 15px;
+    padding: 35px 15px 20px 15px; 
+    
+    background-color: rgba(255, 255, 255, 0.03); 
+    border-left: 1px solid #2B231E; 
+    border-right: 1px solid #2B231E;
+}
+
+/* закрученная кавычка строго по центру над текстом */
+.container_about_me::before {
+    content: "“"; /* Открывающая кавычка-лапка */
+    position: absolute;
+    
+    /* Центрирование элемента по горизонтали */
+    top: -40px;      
+    left: 50%;
+    transform: translateX(-50%);
+    
+
+    font-family: "Playfair Display", serif; 
+    font-size: 7rem; 
+    line-height: 1;
+    
+
+    color: #2B231E;
+    opacity: 0.15; 
+    
+    pointer-events: none; 
+    overflow: visible;
+}
+
+.about_story {
+    font-family: "Onest thin";
+    font-size: 1rem; 
+    line-height: 2;
+    color: #2B231E;
+    margin: 0;
+    text-align: center;   
+}
+
+
+@media (min-width: 768px) {
+    .container_about_me {
+        max-width: 1200px; 
+        margin: 60px auto 40px auto; 
+        padding: 50px 45px 35px 45px; 
+    }
+    
+    .container_about_me::before {
+        top: -50px; 
+        font-size: 9rem; 
+    }
+    
+    .about_story {
+        font-size: 1.15rem; 
+        line-height: 1.7;
+        text-align: justify; 
+        text-justify: inter-word;
+    }
+}
