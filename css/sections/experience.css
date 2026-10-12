@@ -1,0 +1,133 @@
+.experience_section {
+    width: 100%;
+    padding-top: 40px;
+}
+
+.experience_container {
+    width: 100%;
+    margin: 40px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Отступ между карточками на мобилке */
+}
+
+.experience_item {
+    position: relative; 
+    display: flex;
+    flex-direction: column; 
+}
+
+.experience_year_bg {
+    position: relative;
+    z-index: 1;     
+    font-family: "Miama", cursive;
+    font-size: 3rem;
+    font-weight: 300;
+    color: #2B231E;
+    opacity: 0.12;     
+    line-height: 1;
+    pointer-events: none;
+    margin-bottom: 10px;
+}
+
+.experience_content {
+    position: relative;
+    z-index: 2;
+}
+
+.experience__summary {
+    font-size: 1rem;
+    color: #2B231E;
+}
+
+.experience_role {
+    font-family: "Foglihten";
+    color: var(--color-text-2);
+    font-weight: 100;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.experience_company {
+    font-family: "Inter", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgba(43, 35, 30, 0.6);
+    margin: 8px 0 15px 0;
+}
+
+.experience_description {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333333;
+}
+
+
+@media (min-width: 768px) {
+    .experience_container {
+        margin: 60px 0 40px 0;
+        gap: 0; 
+    }
+
+    .experience_item {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .experience_year_bg {
+        position: relative;
+        width: 35%; 
+        top: -15px; 
+        left: 0;
+        text-align: left;
+        font-size: 4.5rem; 
+        margin-bottom: 0;
+    }
+
+
+    .experience_content {
+        width: 60%; 
+        padding-left: 35px;    
+        padding-bottom: 50px;  
+        border-left: 1px solid rgba(43, 35, 30, 0.15) !important; 
+    }
+
+
+    .experience_content::before {
+        content: "";
+        position: absolute;
+        top: 14px;         
+        left: -4px;        
+        width: 7px;
+        height: 7px;
+        background-color: #2B231E;
+        border-radius: 50%;
+    }
+
+
+    .experience_item:last-child .experience_content {
+        padding-bottom: 10px;
+        border-left: 1px solid transparent !important; 
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .experience_year_bg {
+        width: 30%; 
+        font-size: 5rem;
+    }
+    .experience_content {
+        width: 65%; 
+    }
+}
+
+@media (min-width: 1400px) {
+    .experience_container {
+        max-width: 1300px;
+        margin: 60px auto;
+    }
+}
