@@ -34,6 +34,7 @@
 .experience_content {
     position: relative;
     z-index: 2;
+    padding: 20px 40px;
 }
 
 .experience__summary {
@@ -64,8 +65,62 @@
     color: #333333;
 }
 
+.experience_accordion_header {
+    cursor: pointer;
+    outline: none;
+    border-left: 1px solid rgba(43, 35, 30, 0.2);  /* Линия слева */
+    border-right: 1px solid rgba(43, 35, 30, 0.2); /* Линия справа */
+    padding: 15px 20px; 
+    border-radius: 8px; 
+    box-shadow: 
+        0 4px 12px rgba(43, 35, 30, 0.03),
+        0 8px 24px rgba(43, 35, 30, 0.05); 
+    
+    /* Плавность при клике или наведении */
+    transition: background-color 0.3s ease;
+    
+    position: relative;
+    padding-right: 50px !important;
+}
+
+.experience_accordion summary::-webkit-details-marker,
+.experience_accordion summary::marker {
+    display: none !important;
+}
+
+
+.experience_arrow {
+    position: absolute;
+    top: 18px;    /* Выравнивание по высоте внутри серой плашки */
+    right: 20px;   /* Отступ от правого края */
+    font-family: "Inter", sans-serif;
+    font-size: 1.2rem;
+    color: #2B231E;
+    transition: transform 0.3s ease; /* Анимация плавного поворота */
+}
+
+/* При раскрытии аккордеона стрелочка плавно переворачивается на мобилках */
+.experience_accordion[open] .experience_arrow {
+    transform: rotate(180deg);
+}
+
 
 @media (min-width: 768px) {
+
+    .experience_accordion summary::-webkit-details-marker,
+    .experience_accordion summary::marker {
+        display: none !important;
+    }
+    
+    .experience_accordion {
+        pointer-events: none;
+    }
+    
+    .experience_accordion[open] .experience_description,
+    .experience_accordion .experience_description {
+        display: block !important;
+    }
+
     .experience_container {
         margin: 60px 0 40px 0;
         gap: 0; 
@@ -87,14 +142,28 @@
         margin-bottom: 0;
     }
 
-
     .experience_content {
         width: 60%; 
-        padding-left: 35px;    
-        padding-bottom: 50px;  
+        padding: 0 !important; 
+        padding-left: 35px !important;  
+        padding-bottom: 50px !important;
         border-left: 1px solid rgba(43, 35, 30, 0.15) !important; 
+        padding-right: 30px !important;
     }
 
+    .experience_accordion_header {
+        border-left: none !important;
+        border-right: none !important;
+        box-shadow: none !important;   
+        background-color: transparent !important; 
+        padding: 0 !important;          
+        cursor: default;
+    }
+
+
+    .experience_arrow {
+        display: none !important;
+    }
 
     .experience_content::before {
         content: "";
@@ -107,9 +176,8 @@
         border-radius: 50%;
     }
 
-
     .experience_item:last-child .experience_content {
-        padding-bottom: 10px;
+        padding-bottom: 10px !important;
         border-left: 1px solid transparent !important; 
     }
 }
@@ -120,6 +188,7 @@
         width: 30%; 
         font-size: 5rem;
     }
+    
     .experience_content {
         width: 65%; 
     }
