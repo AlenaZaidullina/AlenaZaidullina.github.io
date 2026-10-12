@@ -2,6 +2,7 @@
 @import url("base/variables.css");
 @import url("base/fonts.css");
 @import url("base/reset.css");
+@import url("base/button.css");
 
 @import url("sections/sections.css");
 @import url("sections/hero.css");

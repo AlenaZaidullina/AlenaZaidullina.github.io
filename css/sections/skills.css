@@ -3,7 +3,7 @@
 .skills_section {
     margin-top: 10px;
     width: 100%;
-    padding-top: 60px;   /* пространство сверху и снизу */
+    padding-top: 40px;   /* пространство сверху и снизу */
 }
 
 .skills_container {
@@ -18,13 +18,11 @@
 
 
 .skill_card {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     position: relative; 
 
     display: flex;
     flex-direction: column; 
-    align-items: center; 
-    text-align: center;
 }
 
 .skill_card_num {
@@ -34,7 +32,7 @@
     z-index: 1;     
     
     font-family: "Miama";
-    font-size: 5.5rem;
+    font-size: 3.5rem;
     font-weight: 300;
     color: #2B231E;
     opacity: 0.12;     
@@ -47,13 +45,17 @@
 .skill_card_title {
     font-family: "Miama";
     color: #000;
-    font-weight: 300;
+    font-weight: 100;
+
+    top: -13px;     
+    left: -5px;  
     
     position: relative; /*  позиционирование для работы z-index */
     z-index: 2;      
 }
 
 .list-content {
+    list-style: none;
     color: #000;
     font-family: "Amstelvar";
     
@@ -68,6 +70,7 @@
 .neo-marker {
     font-family: 'Roboto';
     font-size: 1rem;
+
 }
 
 @media (min-width: 1200px) {
@@ -75,8 +78,8 @@
         margin: 60px 0 40px 0;
         
         display: grid;
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 40px 50px; /* 40px отступ между строками, 50px — между колонками */
+        grid-template-columns: 1fr; 
+        gap: 40px; /* 40px отступ между строками, 50px — между колонками */
     }
 
     .skill_card {
@@ -111,9 +114,9 @@
 
 @media (min-width: 1400px) {
     .skills_container {
-        grid-template-columns: repeat(3, 1fr); 
+        grid-template-columns: 1fr; 
         max-width: 1300px; 
         margin: 60px auto;
-        gap: 50px 80px;
+        gap: 10px;
     }
 }

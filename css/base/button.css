@@ -1,5 +1,4 @@
 /* бургер кнопки */
-
 .header__burger {
     display: flex;
     flex-direction: column;
@@ -26,13 +25,14 @@
 /* Первая полоска */
 .header__burger[aria-expanded="true"] .header__burger-line:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
+    background-color: #E3D7C5;
 }
 
 /* Вторая полоска*/
 .header__burger[aria-expanded="true"] .header__burger-line:nth-child(2) {
-    transform: translateY(-9px) rotate(-45deg)
+    transform: translateY(-9px) rotate(-45deg);
+    background-color: #E3D7C5;
 }
-
 
 
 
@@ -41,9 +41,6 @@
         display: none;
     }
 }
-
-
-
 
 /*Жидкое стекло*/
 
@@ -73,3 +70,5 @@
   width: 64px;
   height: 64px;
 }
+
+
