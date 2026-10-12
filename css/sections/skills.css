@@ -47,7 +47,7 @@
     color: #000;
     font-weight: 100;
 
-    top: -13px;     
+    top: -25px;     
     left: -5px;  
     
     position: relative; /*  позиционирование для работы z-index */
@@ -68,54 +68,72 @@
 }
 
 .neo-marker {
-    font-family: 'Roboto';
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
-
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
     .skills_container {
         margin: 60px 0 40px 0;
-        
         display: grid;
         grid-template-columns: 1fr; 
-        gap: 40px; /* 40px отступ между строками, 50px — между колонками */
+        gap: 40px; 
     }
 
     .skill_card {
         flex-direction: row; 
-        align-items: flex-start;
+        align-items: baseline; /* Заменила flex-start на baseline */
         justify-content: space-between;
-        
         border-bottom: 1px solid rgba(43, 35, 30, 0.1); 
         padding-bottom: 25px;
     }
 
     .skill_card_title {
-        width: 40%; 
+        width: 35%; 
         margin: 0;
+        top: 0; /* Обнуляю, чтобы текст встал в поток строки */
         text-align: left;
     }
 
     .list-content {
-        width: 55%;
-        
-        flex-direction: column; 
-        gap: 12px; 
+        width: 60%; 
+        margin-top: 0;       /* Сбрасываю верхний отступ браузера */
+        margin-bottom: 0;    /* Сбрасываю нижний отступ браузера */
+        flex-direction: row; 
+        flex-wrap: wrap;     
+        row-gap: 8px;        
+        column-gap: 0;       
     }
     
+    /* разделитель " / " между технологиями */
+    .list-content .neo-marker:not(:last-child)::after {
+        content: "/";
+        margin: 0 12px;       
+        color: rgba(43, 35, 30, 0.3); 
+        font-family: "Amstelvar", serif; 
+    }
+
+    
+    /* Увеличиваю фоновую цифру для больших экранов */
     .skill_card_num {
         top: -25px; 
         left: -15px;
-        font-size: 6.5rem;
+        font-size: 4rem;
     }
 }
 
+@media (min-width: 1200px) {
+    .skill_card_title {
+        width: 30%; 
+    }
+    .list-content {
+        width: 65%; 
+    }
+}
 
 @media (min-width: 1400px) {
     .skills_container {
         grid-template-columns: 1fr; 
-        max-width: 1300px; 
         margin: 60px auto;
         gap: 10px;
     }

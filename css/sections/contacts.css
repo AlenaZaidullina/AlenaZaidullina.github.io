@@ -3,7 +3,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    min-height: 50vh; /* Минимальная высота секции, настройте под себя (например, 400px) */
+    min-height: 50vh; /* Минимальная высота секции */
     z-index: 1; /* Опускает секцию под тег main */
     
     /* Стили для центрирования контента внутри контактов */
@@ -20,7 +20,7 @@
 
 .text_contacts {
     font-family: "Foglihten";
-    font-size: 2rem;
+    font-size: 3.5rem;
     font-weight: 100;
     letter-spacing: 5px;
     color: #2B231E;
@@ -47,6 +47,7 @@
 .contact_icon img {
     filter: drop-shadow(1px 1px 2px rgba(255, 255, 255, 0.4));
     transition: transform 0.3s ease, opacity 0.3s ease;
+    width: 30px;
 }
 
 .contact_icon img:hover {
@@ -55,10 +56,18 @@
 }
 
 
+@media (min-width: 576px) {
+    
+    .text_contacts {
+        font-size: 4.5rem;
+        letter-spacing: 10px;
+    }
+
+}
+
 @media (min-width: 1200px) {
     .text_contacts {
-        font-size: 4rem;
-        letter-spacing: 10px;
+        letter-spacing: 12px;
     }
 
     .container_contacts {
