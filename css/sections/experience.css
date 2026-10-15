@@ -9,23 +9,23 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
-    gap: 40px; /* Отступ между карточками на мобилке */
+    gap: 40px;
 }
 
-/* Изменено для мобильных: выстраиваем год и контент в ряд */
+
 .experience_item {
     position: relative; 
     display: flex;
-    flex-direction: row; /* Меняем на row, чтобы год встал СЛЕВА от контейнера */
-    gap: 10px; /* Небольшой отступ от вертикального года до контейнера */
+    flex-direction: row;
+    gap: 10px; 
 }
 
-/* ИЗМЕНЕНО: Год расположен ВЕРТИКАЛЬНО */
+
 .experience_year_bg {
     position: relative;
     z-index: 1;     
     font-family: "Miama", cursive;
-    font-size: 2rem; /* Сделали шрифт поменьше, как ты просила */
+    font-size: 2rem; 
     font-weight: 300;
     color: #2B231E;
     opacity: 0.12;     
@@ -33,20 +33,18 @@
     pointer-events: none;
     margin-bottom: 0;
     
-    /* Магия вертикального текста */
     writing-mode: vertical-lr; 
-    transform: rotate(180deg); /* Переворачиваем, чтобы читалось снизу вверх */
+    transform: rotate(180deg);
     text-align: center;
     white-space: nowrap;
-    align-self: stroke; /* Растягиваем по высоте, чтобы центрировать визуально */
+    align-self: stroke; 
     padding-bottom: 10px;
 }
 
-/* Изменено: даем контенту занимать всю оставшуюся ширину справа от года */
 .experience_content {
     position: relative;
     z-index: 2;
-    padding: 20px 20px; /* Немного уменьшили боковые падинги на мобилке из-за года */
+    padding: 20px 40px; 
     flex-grow: 1;
 }
 
@@ -155,7 +153,7 @@
     }
 
     .experience_content {
-        width: 80%; /* Увеличили ширину под контент, так как год стал компактным */
+        width: 80%; 
         padding: 0 !important; 
         padding-left: 35px !important;  
         padding-bottom: 50px !important;
