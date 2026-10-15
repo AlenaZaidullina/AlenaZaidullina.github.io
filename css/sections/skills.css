@@ -25,23 +25,8 @@
     flex-direction: column; 
 }
 
-.skill_card_num {
-    position: absolute;
-    top: -13px;     
-    left: -5px;   
-    z-index: 1;     
-    
-    font-family: "Miama";
-    font-size: 3.5rem;
-    font-weight: 300;
-    color: #2B231E;
-    opacity: 0.12;     
-    line-height: 1;
-    pointer-events: none;
-    padding-right: 2px;
-}
 
-/* ЧТОБЫ ТЕКСТ БЫЛ ПОВЕРХ ЦИФРЫ */
+
 .skill_card_title {
     font-family: "Miama";
     color: #000;
@@ -111,14 +96,6 @@
         margin: 0 12px;       
         color: rgba(43, 35, 30, 0.3); 
         font-family: "Amstelvar", serif; 
-    }
-
-    
-    /* Увеличиваю фоновую цифру для больших экранов */
-    .skill_card_num {
-        top: -25px; 
-        left: -15px;
-        font-size: 4rem;
     }
 }
 

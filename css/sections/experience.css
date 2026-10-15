@@ -28,8 +28,8 @@
     font-size: 2rem; 
     font-weight: 300;
     color: #2B231E;
-    opacity: 0.12;     
-    line-height: 1;
+    opacity: 0.3;     
+    line-height: 1.4;
     pointer-events: none;
     margin-bottom: 0;
     
@@ -39,6 +39,7 @@
     white-space: nowrap;
     align-self: stroke; 
     padding-bottom: 10px;
+
 }
 
 .experience_content {
@@ -94,9 +95,19 @@
     padding-right: 50px !important;
 }
 
-.experience_accordion summary::-webkit-details-marker,
-.experience_accordion summary::marker {
+/* Полное удаление стандартного маркера details во всех браузерах */
+.experience_container summary::-webkit-details-marker,
+.experience_container summary::marker,
+summary::-webkit-details-marker,
+summary::marker {
     display: none !important;
+    content: ""; /* Для Safari, если display: none не срабатывает */
+}
+
+/* На всякий случай сброс list-style, который тоже может вызывать стрелочку */
+summary {
+    list-style: none !important;
+    list-style-type: none !important;
 }
 
 .experience_arrow {
@@ -145,7 +156,7 @@
 
     .experience_year_bg {
         position: relative;
-        width: 8%;
+        width: 12%;
         font-size: 2.5rem; 
         top: 0; 
         left: 0;
@@ -187,18 +198,28 @@
 
     .experience_item:last-child .experience_content {
         padding-bottom: 10px !important;
-        border-left: 1px solid transparent !important; 
+        border-left: 1px solid rgba(43, 35, 30, 0.15) !important; 
     }
+
 }
 
 @media (min-width: 1200px) {
     .experience_year_bg {
-        width: 15%; 
+        width: 18%; 
         font-size: 2.5rem;
+
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+        text-align: center;
+        white-space: normal; 
+        line-height: 50px; 
+        padding-top: 20px; 
+
+        transition: transform 0.5s ease, width 0.5s ease; 
     }
     
     .experience_content {
-        width: 85%; 
+        width: 82%; 
     }
 }
 
