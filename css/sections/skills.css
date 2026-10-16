@@ -1,141 +1,259 @@
-
 .skills_section {
-    margin-top: 10px;
     width: 100%;
-    padding-top: 40px;   /* пространство сверху и снизу */
+    margin-top: 10px;
+    padding-top: 40px;
+    padding-right: 40px;
 }
 
 .skills_container {
     width: 100%;
+    max-width: 1100px;
     margin: 40px auto;
-    padding: 10px;
+    padding: 0 20px;
 
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-.skill_icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    margin-right: 8px;
-    vertical-align: middle;
-}
-
-.skill_icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-
-    filter: brightness(0) saturate(100%) invert(8%) sepia(15%) saturate(1200%) hue-rotate(340deg) brightness(90%) contrast(95%);
+    gap: 0;
 }
 
 
 .skill_card {
-    padding-bottom: 10px;
-    position: relative; 
-
-    display: flex;
-    flex-direction: column; 
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(43, 35, 30, 0.12);
 }
 
+
+.skill_card:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
 
 
 .skill_card_title {
-    color: #000;
-    font-weight: 100;
-
-    top: -25px;     
-    left: -5px;  
-    
-    position: relative; /*  позиционирование для работы z-index */
-    z-index: 2;      
+    font-family: "Foglihten", serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: #2B231E;
+    margin: 0 0 16px 0;
 }
+
 
 .list-content {
     list-style: none;
-    color: #000;
-    font-family: "Amstelvar";
-    
-    position: relative;
-    z-index: 2;
+    margin: 0;
+    padding: 0;
 
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
+
 .neo-marker {
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 0.95rem;
+    color: #2B231E;
+    line-height: 1.4;
 }
+
+
+.skill_icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+}
+
+.skill_icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(8%) sepia(15%) saturate(1200%) hue-rotate(340deg) brightness(90%) contrast(95%);
+}
+
+
+.neo-marker-notice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    color: rgba(43, 35, 30, 0.6);
+    font-style: italic;
+    padding-left: 32px;
+}
+
+
+@media (min-width: 576px) {
+
+    .skills_container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0 40px;
+        padding: 0 30px;
+    }
+
+    .skill_card {
+        padding: 24px 0;
+        border-bottom: 1px solid rgba(43, 35, 30, 0.12);
+    }
+
+
+    .skill_card:nth-last-child(-n+2) {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+
+    .skill_card:not(:nth-last-child(-n+2)) {
+        border-bottom: 1px solid rgba(43, 35, 30, 0.12);
+    }
+}
+
 
 @media (min-width: 768px) {
 
     .skills_container {
-        margin: 30px 30px 30px 30px;
-        display: grid;
-        grid-template-columns: 1fr; 
-        gap: 20px; 
-        padding: 30px;
+        margin: 50px auto;
+        padding: 0 40px;
     }
 
     .skill_card {
-        flex-direction: row; 
-        align-items: baseline; /* Заменила flex-start на baseline */
-        justify-content: space-between;
-        border-bottom: 1px solid rgba(43, 35, 30, 0.1); 
-        padding-bottom: 25px;
+        padding: 28px 0;
     }
 
     .skill_card_title {
-        width: 35%; 
-        margin: 0;
-        top: 0; /* Обнуляю, чтобы текст встал в поток строки */
-        text-align: left;
+        font-size: 1.25rem;
+        margin-bottom: 18px;
     }
 
     .list-content {
-        width: 60%; 
-        margin-top: 0;       /* Сбрасываю верхний отступ браузера */
-        margin-bottom: 0;    /* Сбрасываю нижний отступ браузера */
-        flex-direction: row; 
-        flex-wrap: wrap;     
-        row-gap: 8px;        
-        column-gap: 0;       
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px 0;
     }
-    
-    /* разделитель " / " между технологиями */
+
+    .neo-marker {
+        font-size: 1rem;
+    }
+
     .list-content .neo-marker:not(:last-child)::after {
         content: "/";
-        margin: 0 12px;       
-        color: rgba(43, 35, 30, 0.3); 
-        font-family: "Amstelvar", serif; 
+        margin: 0 12px;
+        color: rgba(43, 35, 30, 0.3);
+        font-family: "Amstelvar", serif;
+        font-size: 1rem;
+    }
+
+    .list-content .neo-marker-notice::after {
+        content: none;
     }
 }
+
+
+@media (min-width: 992px) {
+
+    .skills_container {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0 40px;
+        padding: 0 40px;
+    }
+
+    .skill_card {
+        padding: 24px 0;
+        border-bottom: 1px solid rgba(43, 35, 30, 0.12);
+    }
+
+
+    .skill_card:nth-last-child(-n+3) {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+
+    .skill_card:not(:nth-last-child(-n+3)) {
+        border-bottom: 1px solid rgba(43, 35, 30, 0.12);
+        padding-bottom: 24px;
+    }
+}
+
 
 @media (min-width: 1200px) {
 
     .skills_container {
-        padding: 10px 20px 10px 30px;
+        max-width: 1300px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0 40px;
+    }
+
+    .skill_card:nth-last-child(-n+3) {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .skill_card:not(:nth-last-child(-n+3)) {
+        border-bottom: 1px solid rgba(43, 35, 30, 0.12);
+        padding-bottom: 24px;
     }
 
     .skill_card_title {
-        width: 30%; 
-    }
-    .list-content {
-        width: 65%; 
+        font-size: 1.3rem;
     }
 }
+
+
 
 @media (min-width: 1400px) {
 
     .skills_container {
-        grid-template-columns: 1fr; 
-        margin: 60px auto;
-        gap: 10px;
+        max-width: 1600px;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 0;
+        padding: 0 40px;
+    }
+
+
+    .skill_card,
+    .skill_card:nth-last-child(-n+2),
+    .skill_card:nth-last-child(-n+3),
+    .skill_card:not(:nth-last-child(-n+2)),
+    .skill_card:not(:nth-last-child(-n+3)) {
+        border-bottom: none;
+        padding: 0 24px;
+        border-right: 1px solid rgba(43, 35, 30, 0.12);
+    }
+
+
+    .skill_card:first-child {
+        padding-left: 0;
+    }
+
+   
+    .skill_card:last-child {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .skill_card_title {
+        font-size: 1.1rem;
+    }
+
+    .neo-marker {
+        font-size: 0.9rem;
+    }
+
+    .list-content .neo-marker:not(:last-child)::after {
+        content: none;
+    }
+
+    .list-content {
+        flex-direction: column;
+        gap: 8px;
     }
 }
