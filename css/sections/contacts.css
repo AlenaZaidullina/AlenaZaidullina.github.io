@@ -3,7 +3,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    min-height: 50vh; /* Минимальная высота секции */
+    min-height: 55vh; /* Минимальная высота секции */
     z-index: 1; /* Опускает секцию под тег main */
     
     /* Стили для центрирования контента внутри контактов */
@@ -37,10 +37,17 @@
 
 .container_contacts {
     display: flex; 
-    flex-direction: row; /* элементы горизонтально */
+    flex-direction: column; /* элементы горизонтально */
+    align-items: flex-start;
     justify-content: center;
-    align-items: center;
-    gap: 35px; 
+    gap: 10px; 
+    width: fit-content;
+    margin: 0 0 0 130px;
+}
+
+.contact_item {
+    display: flex;
+    gap: 10px;
 }
 
 /* Стили для самих иконок (эффект при наведении) */
@@ -55,6 +62,12 @@
     opacity: 0.8;
 }
 
+.contact_link {
+    text-decoration: none;
+    color: #2B231E;
+    padding: 5px;
+}
+
 
 @media (min-width: 576px) {
     
@@ -66,13 +79,14 @@
 }
 
 @media (min-width: 1200px) {
+    .contacts_section {
+        min-height: 60vh;
+    }
+
     .text_contacts {
         letter-spacing: 12px;
     }
 
-    .container_contacts {
-        gap: 50px;
-    }
 
     .contacts_line {
         margin-top: 40px; 
@@ -81,5 +95,9 @@
 
     .contact_icon img {
         width: 40px;
+    }
+
+    .contact_link {
+        padding: 10px;
     }
 }
