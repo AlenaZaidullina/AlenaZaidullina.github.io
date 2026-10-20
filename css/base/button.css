@@ -86,7 +86,7 @@
     padding: 20px 30px;
 
     background-color: transparent;  
-    color: #2B231E;                 
+    color: var(--color-accent);                 
 
     font-family: "Manrope", sans-serif;
     font-size: 1.2rem;

@@ -4,8 +4,9 @@
 
     --color-bg: #D5D2CE; 
     --rosy-brown: #9B8384;
-    --color-bg-alt: #ededed;           /* чередование секций */
-    --color-text: #0f0704;
+    --color-bg-alt: #ededed;  
+    --color-text: #4a4a4a;
+    --color-text-1: #0f0704;
     --color-text-2: #201409;
     --color-text-secondary: #6b6b6b;
     --color-text-muted: #9a9a9a;
