@@ -23,12 +23,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateX(100%); /* Полностью прячем навигацию за экран */
+    transform: translateX(100%);
     transition: transform var(--transition-base);
     z-index: 105; 
 }
 
-/* Меню плавно выезжает, когда твой JS добавляет класс */
+
 .header__nav.is-open {
     transform: translateX(0);
 }
@@ -101,7 +101,7 @@
 @media (min-width: 992px) {
 
     .header__inner {
-        padding: 10px 0px 10px 0;
+        padding: 10px 5px 10px 5px;
     }
 
     .header__nav-link {
