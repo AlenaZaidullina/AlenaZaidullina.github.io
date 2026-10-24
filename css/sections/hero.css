@@ -1,73 +1,223 @@
 .hero_section {
     width: 100%;
+    overflow: hidden;
 }
 
 .container_hero {
-    display: flex;
-    flex-direction: column; /* Элементы в одну колонку */
-    align-items: center;    /* Центр фото и текст на мобильных */
-    gap: 24px;
-    padding: 20px;
     width: 100%;
-}
+    max-width: 1600px;
+    margin: 0 auto;
 
-.profile-img {
-    display: block;
-    max-width: 350px;
-    width: 100%;
-    height: auto;
-    border-radius: 0px 10px 70px 150px;
-}
-
-.hero_content {
     display: flex;
     flex-direction: column;
-    align-items: center;  
-    gap: 15px;
+    align-items: center;
+    gap: 32px;
+}
+
+/* Текстовая часть */
+
+.hero_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
     text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero_eyebrow {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    opacity: 0.8;
 }
 
 .hero_title {
-    font-family: "Foglihten", serif; 
-    color: var(--color-accent);    
-    letter-spacing: 5px;             /* Немного воздуха между буквами*/
-    font-size: 1.8rem;
-    font-weight: 500;
-    margin-right: 20px;
+    margin: 0;
+    font-family: "Foglihten", serif;
+    font-size: clamp(2rem, 7vw, 2.8rem);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: 1px;
+    color: #4a4a4a;
+}
+
+
+.desktop-break {
+    display: none;
+}
+
+
+.hero_visual {
+    width: 100%;
+    max-width: 350px;
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 
 
-@media (min-width: 576px) {
+.hero_visual::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    /* Размер и положение углубления */
+    width: 115%;
+    height: 90%;
+    top: 5%;
+    left: -12%;
+
+    /* Не арка: асимметричная округлая ниша */
+    border-radius: 46% 54% 48% 52% /
+                   44% 48% 52% 56%;
+
+    background: #D5D2CE;
+
+    /* Свет и тень внутри поверхности */
+    box-shadow:
+        inset 8px 8px 18px rgba(255, 255, 255, 0.38),
+        inset -8px -8px 18px rgba(74, 74, 74, 0.12);
+}
+
+
+.profile-img {
+    display: block;
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+
+    object-fit: contain;
+    object-position: bottom;
+
+}
+
+
+.download-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 48px;
+    padding: 12px 24px;
+
+    border: 1px solid var(--color-accent);
+    border-radius: 50px;
+
+    color: #4a4a4a;
+    text-decoration: none;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: var(--color-accent);
+    color: #f3efe9;
+}
+
+.download-btn__text {
+    font-family: sans-serif;
+    font-size: 0.9rem;
+}
+
+
+@media (min-width: 768px) {
 
     .container_hero {
-        flex-direction: row;        
-        justify-content: space-between; 
+        min-height: 520px;
+        padding: 55px 5% 60px;
 
-        align-items: flex-start;        
-        
-        max-width: 1200px;          
-        margin: 0 auto;             
-        padding-top: 50px; /* Если нужно опустить всю секцию пониже от верха сайта */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 35px;
     }
 
     .hero_content {
-        order: 1;                  
-        align-items: flex-start;   
+        flex: 1 1 55%;
+        align-items: flex-start;
         text-align: left;
-        margin-top: 20px; 
+        gap: 24px;
+    }
+
+    .hero_title {
+        font-size: clamp(2.8rem, 5vw, 4.5rem);
+        letter-spacing: 1px;
+    }
+
+    .desktop-break {
+        display: none;
+    }
+
+    .hero_visual {
+        flex: 0 1 42%;
+        width: 42%;
+        max-width: 390px;
+        align-self: stretch;
+        align-items: flex-end;
     }
 
     .profile-img {
-        order: 2;                  
-        max-width: 350px;
-        margin-right: 20px;         
+        width: 100%;
+        max-width: 390px;
+        max-height: 480px;
     }
 }
 
 
 @media (min-width: 1200px) {
+
+    .container_hero {
+        min-height: 570px;
+        padding: 55px 7% 65px;
+        gap: 60px;
+    }
+
+    .hero_content {
+        flex-basis: 58%;
+        gap: 28px;
+    }
+
+    .hero_title {
+        font-size: clamp(4rem, 5.3vw, 5.8rem);
+        line-height: 0.98;
+        letter-spacing: 0;
+    }
+
+    .desktop-break {
+        display: block;
+    }
+
+    .hero_visual {
+        flex-basis: 42%;
+        max-width: 440px;
+    }
+
     .profile-img {
-        margin-right: 40px;
+        max-width: 440px;
+        max-height: 500px;
+    }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .download-btn {
+        transition: none;
     }
 }

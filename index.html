@@ -41,144 +41,125 @@
 
  <main>
 
-    <section id="hero" class="hero_section">
-        <div class="container_hero"> 
-            
-            <!-- Фотография -->
-            <img src="assets/img/photo_alena.png" alt="Алена Зайдуллина" class="profile-img">
 
+    <section id="hero" class="hero_section">
+        <div class="container_hero">
 
             <div class="hero_content">
-                <h1 class="hero_title">Алёна Зайдуллина</h1> 
-                <a href="assets/pdf/Стажер_Зайдуллина_Алена.pdf" download class="download-btn">
-                    <span class="download-btn__text">Скачать резюме (PDF)</span>
+                <p class="hero_eyebrow">Bioinformatics Intern</p>
+
+                <h1 class="hero_title">
+                    Алёна<br class="desktop-break">
+                    Зайдуллина
+                </h1>
+
+                <a
+                    href="assets/pdf/Стажер_Зайдуллина_Алена.pdf"
+                    download
+                    class="download-btn"
+                >
+                    <span class="download-btn__text">
+                        Скачать резюме (PDF)
+                    </span>
                 </a>
             </div>
-            
+
+            <div class="hero_visual">
+                <img
+                    src="assets/img/hero_photo.png"
+                    alt="Алёна Зайдуллина"
+                    class="profile-img"
+                >
+            </div>
+
         </div>
     </section>
 
 
+    
     
     
     <section id="skills" class="skills_section">
 
         <h2 class="section_title">
-            <span class="section_text">Technical Skills</span>
+            <span class="section_text">Skills</span>
         </h2>
 
-        <div class="skills_container ">
-            
-            <div class="skill_card">
-                <h3 class="skill_card_title">Programming & Scripting:</h3>
-                <ul class="list-content">
-                    <li class="neo-marker">
-                        <span class="skill_icon">
-                            <img src="assets/svg/python-plain.svg" alt="Python" >
-                        </span>   
-                        Python (ООП)</li>
-                    <li class="neo-marker">
-                        <span class="skill_icon">
-                            <img src="assets/svg/bash-plain.svg" alt="Bash/Shell" >
-                        </span>                        
-                        Bash/Shell</li>
-                    <li class="neo-marker">C (базовый уровень)</li>
+        <div class="skills_container">
+
+            <article class="skill_group skill_group--programming">
+                <p class="skill_kicker">01 / CODE</p>
+                <h3 class="skill_card_title">Programming & Scripting</h3>
+
+                <ul class="skill_list">
+                    <li class="skill_tag skill_tag--featured">Python · OOP</li>
+                    <li class="skill_tag">Bash / Shell</li>
+                    <li class="skill_tag">C <span>Basic</span></li>
                 </ul>
-            </div>
+            </article>
 
-            <div class="skill_card">
-                <h3 class="skill_card_title">Data Science & Analytics:</h3>
-                <ul class="list-content">
-                    <li class="neo-marker">
-                        <span class="skill_icon">
-                            <img src="assets/svg/pandas-plain-wordmark.svg" alt="Pandas" >
-                        </span>                        
-                        Pandas
-                    </li>
-                    <li class="neo-marker">
-                        <span class="skill_icon">
-                            <img src="assets/svg/numpy-plain.svg" alt="NumPy" >
-                        </span>                        
-                        NumPy
-                    </li>
-                    <li>
-                        <span class="skill_icon">
-                            <img src="assets/svg/jupyter-plain-wordmark.svg" alt="Jupyter" >
-                        </span>
-                        Jupyter Notebook
-                    </li>
+            <article class="skill_group">
+                <p class="skill_kicker">02 / DATA</p>
+                <h3 class="skill_card_title">Data Science & Analytics</h3>
+
+                <ul class="skill_list">
+                    <li class="skill_tag skill_tag--featured">Pandas</li>
+                    <li class="skill_tag">NumPy</li>
+                    <li class="skill_tag">Jupyter Notebook</li>
                 </ul>
-            </div>
-            
-            <div class="skill_card">
-                <h3 class="skill_card_title">Bioinformatics & Omics:</h3>
-                <ul class="list-content">
-                    <li class="neo-marker">Biopython</li>
+            </article>
+
+            <article class="skill_group skill_group--bio">
+                <p class="skill_kicker">03 / BIOLOGY</p>
+                <h3 class="skill_card_title">Bioinformatics & Omics</h3>
+
+                <ul class="skill_list">
+                    <li class="skill_tag skill_tag--featured">Biopython</li>
                 </ul>
-            </div>
+            </article>
 
-            <div class="skill_card">
-                <h3 class="skill_card_title">Infrastructure & DevOps:</h3>
-                <ul class="list-content">
-                    <li class="neo-marker">
-                        <span class="skill_icon">
-                            <img src="assets/svg/linux-plain.svg" alt="Linux" >
-                        </span>
-                        Linux (Ubuntu)
-                    </li>
+            <article class="skill_group">
+                <p class="skill_kicker">04 / SYSTEMS</p>
+                <h3 class="skill_card_title">Infrastructure & DevOps</h3>
 
-                    <li class="neo-marker">
-                        <span class="skill_icon">
-                            <img src="assets/svg/" alt="VPS" >
-                        </span>
-                        VPS
-                    </li>                   
-
-                    <li class="neo-marker">
-                        <span class="skill_icon">
-                            <img src="assets/svg/docker-plain.svg" alt="Docker" >
-                        </span>                         
-                        Docker, Docker-compose</li>
-
-                    <li class="neo-marker">
-                        <span class="skill_icon">
-                            <img src="assets/svg/git-original.svg" alt="Git" >
-                        </span>  
-                        Git, GitHub</li>
-
-                    <li class="neo-marker">Nginx, Gunicorn</li>
+                <ul class="skill_list">
+                    <li class="skill_tag">Linux / Ubuntu</li>
+                    <li class="skill_tag">Docker</li>
+                    <li class="skill_tag">Docker Compose</li>
+                    <li class="skill_tag">Git / GitHub</li>
+                    <li class="skill_tag">Nginx</li>
+                    <li class="skill_tag">Gunicorn</li>
+                    <li class="skill_tag">VPS</li>
                 </ul>
-            </div>
+            </article>
 
-            <div class="skill_card">
-                <h3 class="skill_card_title">Databases & Storage:</h3>
-                <ul class="list-content">
-                    <li class="neo-marker">PostgreSQL, SQL</li>
-                    <li class="neo-marker">Redis</li>
-                </ul>
-            </div>
+            <article class="skill_group">
+                <p class="skill_kicker">05 / STORAGE</p>
+                <h3 class="skill_card_title">Databases & Storage</h3>
 
-            <div class="skill_card">
-                <h3 class="skill_card_title">Web Development & Automation:</h3>
-                <ul class="list-content">
-                    <li class="neo-marker">
-                        <span class="skill_icon">
-                            <img src="assets/svg/django-plain.svg" alt="Django" >
-                        </span> 
-                        Django, Celery</li>
-                    <li class="neo-marker">
-                        <span class="skill_icon">
-                            <img src="assets/svg/pytest-plain-wordmark.svg" alt="pytest" >
-                        </span>                         
-                        pytest</li>
-                    <li class="neo-marker">Telegram Bot API</li>
-                    <li class="neo-marker">HTML5 / CSS3</li>
+                <ul class="skill_list">
+                    <li class="skill_tag skill_tag--featured">PostgreSQL</li>
+                    <li class="skill_tag">SQL</li>
+                    <li class="skill_tag">Redis</li>
                 </ul>
-            </div>
+            </article>
+
+            <article class="skill_group skill_group--web">
+                <p class="skill_kicker">06 / WEB</p>
+                <h3 class="skill_card_title">Web Development & Automation</h3>
+
+                <ul class="skill_list">
+                    <li class="skill_tag skill_tag--featured">Django</li>
+                    <li class="skill_tag">Celery</li>
+                    <li class="skill_tag">pytest</li>
+                    <li class="skill_tag">Telegram Bot API</li>
+                    <li class="skill_tag">HTML5 / CSS3</li>
+                </ul>
+            </article>
+
         </div>
-
-
     </section>
+
 
     <section id="projects" class="projects_section">
         <h2 class="section_title">
