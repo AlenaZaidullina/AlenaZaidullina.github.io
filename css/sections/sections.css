@@ -2,7 +2,7 @@
   display: flex;
   align-items: center; /* Выравнивает линию и текст строго по центру одной оси */
   width: 100%;
-  margin-top: 20px;    /* Отступ сверху */
+  margin-top: 40px;    /* Отступ сверху */
   margin-bottom: 10px; /* Отступ снизу до контента */
 }
 
@@ -26,12 +26,24 @@
   margin-right: 18px; 
 }
 
-@media (min-width: 768px) {
-    .section_num {
-        font-size: 2rem;
-    }
+@media (min-width: 576px) {
+  .section_title {
+    margin-top: 20px;
+  }
+}
 
-    .section_text {
-        font-size: 2rem;
-    }
+
+@media (min-width: 768px) {
+
+  .section_title {
+     margin-top: 10px;
+  }
+  
+  .section_num {
+    font-size: 2rem;
+  }
+
+  .section_text {
+    font-size: 2rem;
+  }
 }

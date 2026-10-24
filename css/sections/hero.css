@@ -140,7 +140,7 @@
 
     .container_hero {
         min-height: 520px;
-        padding: 55px 2% 60px;
+        padding: 55px 2% 30px;
 
         flex-direction: row;
         justify-content: space-between;
@@ -183,6 +183,7 @@
 @media (min-width: 1200px) {
 
     .container_hero {
+        width: 95%;      
         min-height: 570px;
         padding: 55px 7% 65px;
         gap: 60px;
