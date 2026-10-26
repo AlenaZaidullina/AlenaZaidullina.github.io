@@ -12,7 +12,7 @@
   flex-grow: 1; /* Растягивает линию на всю доступную ширину слева */
   height: 1px;  /* Толщина линии */
   background-color: rgba(0, 0, 0, 0.2); /* Цвет линии */
-  margin-right: 15px; /* Отступ от линии до начала слова Skills */
+  margin-right: 15px; 
 }
 
 /* 2. Текст "Skills" справа от линии */
@@ -38,7 +38,7 @@
   .section_title {
      margin-top: 10px;
   }
-  
+
   .section_num {
     font-size: 2rem;
   }
